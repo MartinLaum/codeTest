@@ -26,7 +26,7 @@ To run this project, ensure you have the following dependencies installed:
 4. Once the dependencies are installed, start the Node server by running the following command:
 
    ```
-   node server
+   npm start
    ```
 
    The server will start running and display a message indicating the server's URL (e.g., `Server ready at http://localhost:4000`).
