@@ -1,0 +1,28 @@
+.mini-cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart-badge {
+    position: relative;
+    top: -5px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 990px) {
+    .cart-badge {
+      top: -6px;
+      right: 0px;
+    }
+  }
