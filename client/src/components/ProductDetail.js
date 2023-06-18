@@ -127,7 +127,7 @@ const ProductDetail = ({ sku, priceWithVat }) => {
               >
                 +
               </button>
-              <button className="btn btn-primary rounded-0 mx-5" onClick={()=>udpateCartHandler({...product, sku: paramSku}, quantities[paramSku] || 1)}>
+              <button className="btn btn-primary mx-5" onClick={()=>udpateCartHandler({...product, sku: paramSku}, quantities[paramSku] || 1)}>
                 Add to Cart
               </button>
             </div>
