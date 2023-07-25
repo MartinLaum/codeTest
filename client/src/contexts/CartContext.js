@@ -5,10 +5,12 @@ import { GET_CART } from "../graphql/queries";
 export const CartContext = createContext([]);
 
 export const CartContextProvider = ({ children }) => {
+  const cartId = parseInt(localStorage.getItem('cartId'));
   const { data } = useQuery(GET_CART, {
     variables: {
-      "cartid": parseInt(localStorage.getItem('cartId'))
-    }
+      cartid: cartId
+    },
+    skip: isNaN(cartId) // Skip the query if cartId is not a valid number
   });
   const [carts, setCart] = useState([]);
 
