@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import { useMutation } from "@apollo/client";
 import { DELETE_CART_ITEM, DELETE_USER_CART } from "../graphql/queries";
@@ -8,11 +9,12 @@ const Cart = () => {
   const [deleteCartItemServer] = useMutation(DELETE_CART_ITEM)
   const [deleteUserCart] = useMutation(DELETE_USER_CART)
   const cartid = parseInt(localStorage.getItem('cartId'));
+  const navigate = useNavigate();
   const handleBuyNow = async () => {
     try{
       await deleteUserCart({variables: {cartid: cartid}});
       setCart([]);
-      window.location.href = "/complete";
+      navigate("/complete");
     }catch{}
   };
 
