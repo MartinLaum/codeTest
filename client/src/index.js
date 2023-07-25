@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import ProductListVat from "./components/productListVat";
+import ProductListVat from "./components/ProductListVat";
 import ProductDetail from "./components/ProductDetail";
 import Cart from "./components/Cart";
 import NotFound from "./pages/NotFound";
