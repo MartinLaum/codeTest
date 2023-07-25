@@ -25,7 +25,8 @@ const Cart = () => {
     (total, item) => total + item.totalPrice,
     0
   );
-  const VATtotal = totalPrice * 0.21;
+  const VATamount = 0.21;
+  const VATtotal = totalPrice * VATamount;
   const finalPrice = totalPrice + VATtotal;
 
   // Delete cart item
